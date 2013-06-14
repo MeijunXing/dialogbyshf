@@ -1,5 +1,5 @@
 ﻿/**
-* TreeBySHF Library v1.0.0
+* DialogBySHF Library v1.0.0
 * http://cnblogs.com/iamshf
 *
 * author:盛浩峰
