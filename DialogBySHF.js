@@ -28,7 +28,7 @@
     //初始化参数
     function Init(params) {
         if (params != undefined && params != null) {
-            PARAMS = $.extend({},DEFAULTPARAMS, params);
+            PARAMS = $.extend({}, DEFAULTPARAMS, params);
         }
         ContentWidth = PARAMS.Width - 10;
         ContentHeight = PARAMS.Height - 45;
@@ -41,6 +41,8 @@
         //在屏幕中显示的位置（正中间）
         var positionLeft = (screenWidth - PARAMS.Width) / 2 + $(document).scrollLeft();
         var positionTop = (screenHeight - PARAMS.Height) / 2 + $(document).scrollTop();
+        positionLeft = positionLeft < 0 ? 0 : positionLeft;
+        positionTop = positionTop < 0 ? 0 : positionTop;
         var Content = [];
         Content.push("<div id=\"DialogBySHFLayer\" style=\"width:" + $(document).width() + "px;height:" + $(document).height() + "px;\"></div>");
         Content.push("<div id=\"DialogBySHF\" style=\"width:" + PARAMS.Width + "px;height:" + PARAMS.Height + "px;left:" + positionLeft + "px;top:" + positionTop + "px;\">");
