@@ -5,6 +5,14 @@
 * author:盛浩峰
 * Date: 2013-06-14
 */
+
+/*添加样式，在IE9.0一下版本中需要单独引用，此处引用无效*/
+var STYLEPATH = "http://resource.en100.com.cn/Javascript/DialogBySHF/DialogBySHF.css";
+$("<link>")
+    .attr({ rel: "stylesheet",
+        type: "text/css",
+        href: STYLEPATH
+    }).appendTo("head");
 (function ($) {
     //默认参数
     var PARAMS;
